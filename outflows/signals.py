@@ -10,7 +10,7 @@ def get_product_values(sender, instance, **kwargs):
         if instance.payment_type == 'À VISTA':
             instance.outflow_selling_price = instance.product.cash_selling_price
         else:
-            instance.outflow_selling_price = instance.product.cash_selling_price
+            instance.outflow_selling_price = instance.product.selling_price
     else:
         raise ValueError("O produto associado não pode ser None.")
 

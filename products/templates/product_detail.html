@@ -15,7 +15,9 @@
         <p class="card-text">Preço à Vista: <strong>R$ {{ object.cash_selling_price }}</strong></p>
         <p class="card-text">Preço a Prazo: <strong>R$ {{ object.selling_price }}</strong></p>
         <p class="card-text">Quantidade em Estoque: <strong>{{ object.quantity }}</strong></p>
-        <p class="card-text">Imagem: <strong><img src={{ object.photo }}</strong></p>
+        {% if object.photo %}
+          <img src="{{ object.photo.url }}">
+        {% endif %}
       </div>
     </div>
 

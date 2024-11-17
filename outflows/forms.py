@@ -6,12 +6,13 @@ from . import models
 class OutflowForm(forms.ModelForm):
     class Meta:
         model = models.Outflow
-        fields = ['product', 'quantity', 'description',]
+        fields = ['product', 'quantity', 'description', 'payment_type']
+        CHOICES = (('À VISTA', 'À VISTA'), ('A PRAZO', 'A PRAZO'))
         widgets = {
             'product': forms.Select(attrs={'class': 'form-control'}),
             'quantity': forms.NumberInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
-            'payment_type': forms.Select(choices=('À VISTA', 'A PRAZO'), attrs={'class': 'form-control'})
+            'payment_type': forms.Select(attrs={'class': 'form-control'}, choices=CHOICES)
         }
         labels = {
             'product': 'Produto',
