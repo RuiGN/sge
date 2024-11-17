@@ -65,8 +65,8 @@
           <th>Título</th>
           <th>Categoria</th>
           <th>Marca</th>
-          <th>Preço de Custo</th>
-          <th>Preço de Venda</th>
+          <th>Preço à Vista</th>
+          <th>Preço à Prazo</th>
           <th>Número de Série</th>
           <th>Quantidade</th>
           <th>Ações</th>
@@ -83,7 +83,7 @@
             <td>{{ product.title }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.brand }}</td>
-            <td>R$ {{ product.cost_price }}</td>
+            <td>R$ {{ product.cash_selling_price }}</td>
             <td>R$ {{ product.selling_price }}</td>
             <td>{{ product.serie_number }}</td>
             <td>{{ product.quantity }}</td>

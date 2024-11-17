@@ -9,6 +9,7 @@ from outflows.models import Outflow
 
 def get_product_metrics():
     products = Product.objects.all()
+
     total_cost_price = sum(product.cost_price * product.quantity for product in products)
     total_selling_price = sum(product.selling_price * product.quantity for product in products)
     total_quantity = sum(product.quantity for product in products)
@@ -25,8 +26,8 @@ def get_product_metrics():
 def get_sales_metrics():
     total_sales = Outflow.objects.count()
     total_products_sold = Outflow.objects.aggregate(total_products_sold=Sum('quantity'))['total_products_sold'] or 0
-    total_sales_value = sum(outflow.quantity * outflow.product.selling_price for outflow in Outflow.objects.all())
-    total_sales_cost = sum(outflow.quantity * outflow.product.cost_price for outflow in Outflow.objects.all())
+    total_sales_value = sum(outflow.quantity * outflow.outflow_selling_price for outflow in Outflow.objects.all())
+    total_sales_cost = sum(outflow.quantity * outflow.outflow_cost_price for outflow in Outflow.objects.all())
     total_sales_profit = total_sales_value - total_sales_cost
 
     return dict(

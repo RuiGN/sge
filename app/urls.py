@@ -10,7 +10,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
-    path('api/v1/', include('authentication.urls')),
+    path('https://relfsrecife.pythonanywhere.com/api/v1/', include('authentication.urls')),
 
     path('', views.home, name='home'),
     path('', include('suppliers.urls')),
