@@ -75,8 +75,8 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/relfsrecife/sge/app/templates', '/home/relfsrecife/sge/brands/templates', '/home/relfsrecife/sge/categories/templates', '/home/relfsrecife/sge/inflows/templates', '/home/relfsrecife/sge/outflows/templates', '/home/relfsrecife/sge/products/templates', '/home/relfsrecife/sge/suppliers/templates'],
-        # 'DIRS': ['app/templates'],
+        # 'DIRS': ['/home/relfsrecife/sge/app/templates', '/home/relfsrecife/sge/brands/templates', '/home/relfsrecife/sge/categories/templates', '/home/relfsrecife/sge/inflows/templates', '/home/relfsrecife/sge/outflows/templates', '/home/relfsrecife/sge/products/templates', '/home/relfsrecife/sge/suppliers/templates'],
+        'DIRS': ['app/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,23 +95,23 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'relfsrecife',
-        'USER': 'super',
-        'PASSWORD': 'Pl@250706',
-        'HOST': 'relfsrecife-4175.postgres.pythonanywhere-services.com',
-        'PORT': '14175',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'relfsrecife',
+#         'USER': 'super',
+#         'PASSWORD': 'Pl@250706',
+#         'HOST': 'relfsrecife-4175.postgres.pythonanywhere-services.com',
+#         'PORT': '14175',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
