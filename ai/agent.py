@@ -1,4 +1,3 @@
-import os
 import json
 from django.conf import settings
 from django.core import serializers
@@ -12,7 +11,7 @@ class SGEAgent:
 
     def __init__(self):
         self.__client = OpenAI(
-            api_key=os.getenv('OPENAI_API_KEY'),
+            api_key=settings.OPENAI_API_KEY,
         )
 
     def __get_data(self):

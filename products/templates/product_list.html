@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  SGE - Produtos
+  Relf's Moda Fitness - Produtos
 {% endblock %}
 
 {% block content %}
@@ -65,10 +65,15 @@
           <th>Título</th>
           <th>Categoria</th>
           <th>Marca</th>
+          <th>Preço de Custo</th>
           <th>Preço à Vista</th>
           <th>Preço a Prazo</th>
           <th>Número de Série</th>
-          <th>Quantidade</th>
+          <th>Quantidade P</th>
+          <th>Quantidade M</th>
+          <th>Quantidade G</th>
+          <th>Quantidade GG</th>
+          <th>Imagem</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -83,10 +88,15 @@
             <td>{{ product.title }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.brand }}</td>
+            <td>R$ {{ product.cost_price }}</td>
             <td>R$ {{ product.cash_selling_price }}</td>
             <td>R$ {{ product.selling_price }}</td>
             <td>{{ product.serie_number }}</td>
-            <td>{{ product.quantity }}</td>
+            <td>{{ product.quantity_size_p }}</td>
+            <td>{{ product.quantity_size_m }}</td>
+            <td>{{ product.quantity_size_g }}</td>
+            <td>{{ product.quantity_size_gg }}</td>
+            <td><img src="https://relfsrecife.pythonanywhere.com/media/{{ product.photo }}" style="width: 50px; height: auto;"></td>
             <td>
               <a href="{% url 'product_detail' product.id %}" class="btn btn-info btn-sm">
                 <i class="bi bi-eye"></i>

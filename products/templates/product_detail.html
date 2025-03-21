@@ -14,9 +14,12 @@
         <p class="card-text">Preço de Custo: <strong>R$ {{ object.cost_price }}</strong></p>
         <p class="card-text">Preço à Vista: <strong>R$ {{ object.cash_selling_price }}</strong></p>
         <p class="card-text">Preço a Prazo: <strong>R$ {{ object.selling_price }}</strong></p>
-        <p class="card-text">Quantidade em Estoque: <strong>{{ object.quantity }}</strong></p>
+        <p class="card-text">Estoque P: <strong>{{ object.quantity_size_p }}</strong></p>
+        <p class="card-text">Estoque M: <strong>{{ object.quantity_size_m }}</strong></p>
+        <p class="card-text">Estoque G: <strong>{{ object.quantity_size_g }}</strong></p>
+        <p class="card-text">Estoque GG: <strong>{{ object.quantity_size_gg }}</strong></p>
         {% if object.photo %}
-          <img src="{{ object.photo.url }}">
+          <img src="{{ object.photo.url }}" style="width: 200px; height: auto;">
         {% endif %}
       </div>
     </div>

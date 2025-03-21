@@ -9,5 +9,5 @@ class Command(BaseCommand):
         agent.invoke()
 
         self.stdout.write(
-            self.style.SUCCESS('SGE AGENT INVOCADO COM SUCESSO!')
+            self.style.SUCCESS('SGE AGENTE INVOCADO COM SUCESSO!')
         )

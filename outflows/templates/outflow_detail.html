@@ -7,11 +7,16 @@
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">{{ object.product }}</h3>
-        <p class="card-text">Quantidade: <strong>{{ object.quantity }}</strong></p>
+        <p class="card-text">Quantidade P: <strong>{{ object.quantity_size_p }}</strong></p>
+        <p class="card-text">Quantidade M: <strong>{{ object.quantity_size_m }}</strong></p>
+        <p class="card-text">Quantidade G: <strong>{{ object.quantity_size_g }}</strong></p>
+        <p class="card-text">Quantidade GG: <strong>{{ object.quantity_size_gg }}</strong></p>
         <p class="card-text">Pagamento: <strong>{{ object.payment_type }}</strong></p>
         <p class="card-text">Preço de Custo: <strong>{{ object.outflow_cost_price }}</strong></p>
         <p class="card-text">Preço de Venda: <strong>{{ object.outflow_selling_price }}</strong></p>
         <p class="card-text">{{ object.description }}</p>
+        <p class="card-text">{{ object.customer_name }}</p>
+        <p class="card-text">{{ object.customer_phone }}</p>
       </div>
     </div>
 

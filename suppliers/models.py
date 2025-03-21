@@ -9,6 +9,7 @@ class Supplier(models.Model):
 
     class Meta:
         ordering = ['name']
+        verbose_name = 'Fornecedores'
 
     def __str__(self):
         return self.name

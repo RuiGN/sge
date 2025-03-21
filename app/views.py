@@ -13,7 +13,7 @@ def home(request):
     graphic_product_brand_metric = metrics.get_graphic_product_brand_metric()
     daily_sales_data = metrics.get_daily_sales_data()
     daily_sales_quantity_data = metrics.get_daily_sales_quantity_data()
-    ai_result = AIResult.objects.first()
+    ai_result = AIResult.objects.first().result
 
     context = {
         'product_metrics': product_metrics,
